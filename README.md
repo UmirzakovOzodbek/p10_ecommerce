@@ -58,6 +58,7 @@ _____
 
 # Finily
 ![Снимок экрана 2023-04-19 202413](https://user-images.githubusercontent.com/122611764/233131405-c5b398f7-5a57-4f4f-a07e-dcb94000e931.png)
+
 ![Снимок экрана 2023-04-19 205432](https://user-images.githubusercontent.com/122611764/233132300-83b94646-93d4-4df6-b7d0-3cbb555b0b86.png)
 
 _____
