@@ -45,9 +45,9 @@ def profile(request):
 
 
 class RegisterView(View):
-    # template_name = 'account/register.html'
-    # form_class = UserRegistrationForm
-    # success_url = reverse_lazy("account:login")
+    template_name = 'account/register.html'
+    form_class = UserRegistrationForm
+    success_url = reverse_lazy("account:login")
 
     def post(self, request):
         form = UserRegistrationForm(request.POST or None)
@@ -58,5 +58,5 @@ class RegisterView(View):
             email = form.cleaned_data.get("email")
             password = form.cleaned_data.get("password")
             User.objects.create_user(username, email, password, first_name=first_name, last_name=last_name)
-            return redirect("homepage")
+            return redirect("store")
         return render(request, "account/register.html", {"form": form})

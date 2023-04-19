@@ -1,8 +1,52 @@
 {% extends 'store/main.html' %}
 
 {% block content %}
-    <h1>Login</h1>
-    <form action="{% url 'account:login' %}" method="post">
+	<title>Login Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F7F7F7;
+		}
+		h1 {
+			text-align: center;
+			color: #333;
+			font-size: 32px;
+			margin-top: 50px;
+		}
+		form {
+			max-width: 400px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #FFF;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #CCC;
+		}
+		input[type="text"], input[type="password"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-bottom: 2px solid #CCC;
+			margin-bottom: 20px;
+			font-size: 16px;
+			color: #333;
+			box-sizing: border-box;
+		}
+		input[type="submit"] {
+			background-color: #333;
+			color: #FFF;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		input[type="submit"]:hover {
+			background-color: #555;
+		}
+	</style>
+	<form action="{% url 'account:login' %}" method="post">
         {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
@@ -10,5 +54,6 @@
         <input type="password" id="password" name="password">
         <input type="submit" value="Login">
     </form>
+
 
 {% endblock %}
